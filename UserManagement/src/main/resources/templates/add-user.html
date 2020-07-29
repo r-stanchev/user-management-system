@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/styles.css}" />
+<head>
+<meta charset="UTF-8">
+<title>Add User</title>
+</head>
+<body>
+
+	<h1>Please fill in the new user's details:</h1>
+	
+	
+	<form method="POST" th:action="@{/add-user}" th:object="${user}">
+	
+		<div th:if="${#fields.hasErrors()}">
+			<span class="validationError"> Please correct the problems below and resubmit. </span>
+		</div>
+	
+		<div id="addUserForm">
+		
+			<label for="firstName">First name:</label>
+			<input type="text" name="firstName" th:field="*{firstName}"/>
+			<span class="validationError" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">First name error</span> 
+			<br>
+			
+			<label for="lastName">Last name:</label>
+			<input type="text" name="lastName" th:field="*{lastName}"/>
+			<span class="validationError" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Last name error</span> 
+			<br>
+			
+			<label for="email">Email:</label>
+			<input  type="text" name="email" th:field="*{email}"/>
+			<span class="validationError" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email error</span> 
+			<br>
+			
+			<label for="dateOfBirth">Date of birth:</label>
+			<input type="date" name="dateOfBirth" th:field="*{dateOfBirth}"/>
+			<span class="validationError" th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}">Date of birth error</span> 
+			
+		</div>
+		<button class="button">Create User</button>
+	</form>
+
+</body>
+</html>

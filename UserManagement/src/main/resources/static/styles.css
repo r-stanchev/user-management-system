@@ -1,0 +1,97 @@
+body {
+	font-size: 16pt;
+}
+
+.button {
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+	font-size: 14pt;
+	font-weight: bold;
+	margin: 3pt;
+	margin-top: 5pt;
+}
+
+
+#sort {
+	margin-left: 10%;
+	margin-bottom: 1.5%;
+}
+
+#add {
+	margin-left: 2%;
+}
+
+#delete {
+	margin-left: 2%;
+}
+
+#retrieve {
+	margin-left: 2%;
+}
+
+#sortOrder {
+	margin-top: 1%;
+}
+
+input[type="date"] {
+	padding-left: 0.25%;
+	padding-right: 0.25%;
+	padding-top: 0.25%;
+	padding-bottom: 0.25%;
+	
+	margin-left: 0.5%;
+	margin-right: 0.5%;
+	margin-top: 0.5%;
+	margin-bottom: 0.5%;
+}
+
+input[type="text"] {
+	padding-left: 0.25%;
+	padding-right: 0.25%;
+	padding-top: 0.25%;
+	padding-bottom: 0.25%;
+	
+	margin-left: 0.5%;
+	margin-right: 0.5%;
+	margin-top: 0.5%;
+	margin-bottom: 0.5%;
+	
+	font-size: 12pt;
+}
+
+.columnHeading {
+	font-size: 18pt;
+	font-weight: bold;
+}
+
+
+#usersTable {
+	width: 100%;
+	font-size: 16pt;
+	border: 3;
+	border-style: inset;
+	border-spacing: 3pt;
+}
+
+tr,td {
+	border-style: inset;
+	padding: 3pt;
+	white-space:pre-line; 
+}
+
+select[name="sortBy"] {
+	font-size: inherit;
+}
+
+.validationError {
+	color: red;
+}
+
+
+.goToMainPageLink {
+	font-size: 20pt;
+}
+
+

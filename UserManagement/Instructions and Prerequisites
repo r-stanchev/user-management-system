@@ -1,0 +1,12 @@
+PRE-REQUISITES
+1. A Linux OS (preferably Ubuntu)
+1. Java Runtime Environment installed (sudo apt install default-jre)
+2. MySQL (sudo apt install mysql)
+
+1. Extract the .zip file
+6. Go to the directory where the .jar file is
+7. Execute the following command:
+    java -jar Westernacher-0.0.1-SNAPSHOT.jar --spring.datasource.username=XXX --spring.datasource.password=YYY
+where XXX is the username of a pre-existing user with all privileges granted
+and YYY is the password of the same user.
+8. Go to http://localhost:8080/

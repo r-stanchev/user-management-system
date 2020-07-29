@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/styles.css}" />
+<head>
+<meta charset="UTF-8">
+<title>Edit User</title>
+</head>
+<body>
+
+	<h1>EDIT USER</h1>
+	
+	
+ 	<form method="POST" th:object="${editableUser}">
+ 		<label for="fName">First name:</label>
+ 		<input name="fName" type="text" th:field="${editableUser.firstName}">
+ 		<span class="validationError" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">First name error</span>
+ 		<br>
+ 		
+ 		<label for="lName">Last name:</label>
+ 		<input name="lName" type="text" th:field="${editableUser.lastName}">
+ 		<span class="validationError" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Last name error</span>
+ 		<br>
+ 		
+ 		<label for="email">Email:</label>
+ 		<input name="email" type="text" th:field="${editableUser.email}">
+ 		<span class="validationError" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email error</span>
+ 		<br>
+ 		
+ 		<label for="dob">Date of birth:</label>
+ 		<input name="dob" type="date" th:field="${editableUser.dateOfBirth}">
+ 		<span class="validationError" th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}">Date of birth error</span> 
+ 		<br>
+ 	
+
+		<button class="button">Update User</button>
+	</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

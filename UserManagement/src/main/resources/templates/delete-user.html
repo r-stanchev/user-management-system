@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/styles.css}" />
+<head>
+<meta charset="UTF-8">
+<title>Delete User</title>
+</head>
+<body>
+
+	<form method="POST" th:object="${user}">
+
+		<div id="deleteUserForm">
+			<h2>Please enter the email of the user you wish to delete:</h2>
+			<label for="email">Email:</label>
+			<input  type="text" name="email" th:field="*{email}"/>
+			<span class="validationError" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email error</span>
+		</div>
+		<button class="button">Delete User</button>
+	</form>
+
+</body>
+</html>

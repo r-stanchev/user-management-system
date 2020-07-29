@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/styles.css}" />
+<head>
+<title>Home Page</title>
+</head>
+<body>
+	<h1>Here are all the users</h1>
+
+
+
+	<form method="POST" th:action="@{/users}" th:object="${sortCriteria}">
+
+		<div class="sortCriteria">
+			<label for="sortBy">Choose what to sort by:</label>
+			<select name="sortBy">
+				<option value="id" selected>ID</option>
+				<option value="firstName">First Name</option>
+				<option value="lastName">Last Name</option>
+				<option value="email">Email</option>
+				<option value="dateOfBirth">Date of birth</option>
+			</select>
+			<br>
+			
+			<div id="sortOrder">
+				<label for="order">Choose the sorting order:</label>
+				<input type="radio" id="ascending" name="order" value="ASC" checked="checked">
+				<label for="ascending">Ascending</label>
+				<input type="radio" id="descending" name="order" value="DESC">
+				<label for="descending">Descending</label><br>
+			</div>
+		</div>
+		
+	<br>
+	<button class="button" id="sort">Sort</button>
+	</form>
+	
+	<a th:href="@{add-user}"><button class="button" id="add"> Add user </button></a>
+	<a th:href="@{delete-user}"><button class="button" id="delete">	Delete user </button></a>
+	<a th:href="@{retrieve-user}"><button class="button" id="retrieve">	Update user </button></a>
+	
+
+	<br><br>
+	<table id="usersTable">
+		<tr>
+			<td class="columnHeading">ID</td>
+			<td class="columnHeading">First Name</td>
+			<td class="columnHeading">Last Name</td>
+			<td class="columnHeading">Email</td>
+			<td class="columnHeading">Date of birth</td>
+		</tr>
+		<tr th:each="user : ${users}">
+			<td th:text="${user.id}">ID</td>
+			<td th:text="${user.firstName}">First Name</td>
+			<td th:text="${user.lastName}">Last Name</td>
+			<td th:text="${user.email}">Email</td>
+			<td th:text="${user.dateOfBirth}">Date of birth</td>
+		</tr>
+	</table>
+	
+</body>
+</html>
