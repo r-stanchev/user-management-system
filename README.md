@@ -12,6 +12,6 @@ A relatively simple system for viewing, adding, editing and deleting users. I am
 1. Go to the ***UserManagement*** folder 
 2. Execute ***./mvnw package***
 3. After the project has been packaged, execute the following command:  
-    ***java -jar Westernacher-0.0.1-SNAPSHOT.jar --spring.datasource.username=XXX --spring.datasource.password=YYY***    
+    ***java -jar UserManagement-0.0.1-SNAPSHOT.jar --spring.datasource.username=XXX --spring.datasource.password=YYY***    
 where ***XXX*** is the username of a pre-existing user with all privileges granted and ***YYY*** is the password of the same user.
 4. Go to http://localhost:8080/
