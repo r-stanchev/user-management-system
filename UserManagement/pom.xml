@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>users</groupId>
-	<artifactId>Westernacher</artifactId>
+	<artifactId>UserManagement</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Westernacher</name>
-	<description>Fullstack engineer task for Westernacher.</description>
+	<name>UserManagement</name>
+	<description>A system for managing users.</description>
 
 	<properties>
 		<java.version>1.8</java.version>
